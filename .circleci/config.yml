@@ -5,6 +5,10 @@
 version: 2
 jobs:
   build:
+    branches:
+      only:
+        - master
+        - build-*
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
@@ -42,8 +46,5 @@ jobs:
       - run: npm start
 
       workflows:
-        version: 2
-  build:
-    jobs:
-      - build
+  
   
