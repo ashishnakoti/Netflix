@@ -28,10 +28,10 @@ jobs:
           key: dependencies/{{ checksum "package.json" }}
           
 
-      
+      - run:
+          name: Install dependencies
+          command: npm install --no-save
      
-      - run: npm install --no-save
-
       - run:
           name: Build App
           command: npm run build
@@ -40,11 +40,7 @@ jobs:
           paths:
             - node_modules
           key: dependencies/{{ checksum "package.json" }}
-        
-      
-      
-  
-
-      workflows:
+         
+workflows:
   
   
