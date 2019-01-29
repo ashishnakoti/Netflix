@@ -7,7 +7,7 @@ jobs:
   build:
     branches:
       only:
-        - master
+        - test-build-initial
         - build-*
     docker:
       # specify the version you desire here
