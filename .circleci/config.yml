@@ -17,6 +17,8 @@ jobs:
     working_directory: ~/repo
 
     steps:
+
+      
       - checkout
 
       # Download and cache dependencies
@@ -28,13 +30,9 @@ jobs:
 
       - run: yarn install
      
-      - run:
-          name: Install Dependencies
-          command: npm install --no-save
+      - run: npm install --no-save
 
-      - run:
-      name: Build App
-      command: npm run build
+      
 
       - save_cache:
           paths:
@@ -43,6 +41,7 @@ jobs:
         
       # run tests!
       - run: yarn test
+      - run: npm start
 
       workflows:
   
