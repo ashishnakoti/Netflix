@@ -27,6 +27,14 @@ jobs:
           - v1-dependencies-
 
       - run: yarn install
+     
+      - run:
+          name: Install Dependencies
+          command: npm install --no-save
+
+      - run:
+      name: Build App
+      command: npm run build
 
       - save_cache:
           paths:
