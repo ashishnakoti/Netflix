@@ -1,0 +1,6 @@
+# Root dirs
+/node_modules
+
+# Filetypes
+*.DS_Store
+*.log
