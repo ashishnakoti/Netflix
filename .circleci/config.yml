@@ -49,12 +49,6 @@ Push this change up to GitHub.
 5.	
 Start building! This will launch your project on CircleCI and make our webhooks listen for updates to your work.
 
-Start building
-Sample .yml File
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
   build:
@@ -79,13 +73,13 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn install
+      - run: npm install
 
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
-      # run tests!
-      - run: yarn test
+      
+     
 
